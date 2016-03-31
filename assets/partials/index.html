@@ -1,0 +1,31 @@
+<div class="page-header">
+<h1>All Contacts</h1>
+</div>
+<p>{{person.name}}</p>
+<div class="table-responsive">
+<table class="table table-hover">
+<thead>
+<tr>
+<th ng-click="sortData('name')">Name<div ng-class="getSortClass('name')"></div><i class="caretPosition"></i>
+</th>
+<th ng-click="sortData('email')">Email Address<div ng-class="getSortClass('email')"><i class="caretPosition"></i>
+</div></th>    
+<th ng-click="sortData('phone')">Phone Number<div ng-class="getSortClass('phone')"><i class="caretPosition"></i>
+</div></th>    
+<th>Actions</th>    
+</tr>    
+</thead>
+<tbody>
+<tr ng-repeat="contact in contacts | orderBy:sortColumn:reverseSort | filter:search">
+<td>{{contact.name}}</td>
+<td>{{contact.email}}</td>    
+<td>{{contact.phone}}</td>    
+<td><a href="#/contact/{{contact.$id}}" class="btn btn-success btn-xs">View</a>
+<button class="btn btn-danger btn-xs" ng-click="delete(contact)">Delete</button>  
+    
+</td>    
+</tr>
+</tbody>
+</table>
+    
+</div>
