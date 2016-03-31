@@ -1,4 +1,4 @@
-# contactmgr
+# Contact List Manager
 My first single-page app built with AngularJS - a simple contact list manager allowing full CRUD abilities. 
 
 You can view the available list of contacts on the "Browse" page. To sort out the list by column, press on the column name.
